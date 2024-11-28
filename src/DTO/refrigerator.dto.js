@@ -1,0 +1,15 @@
+export const formatProductData = (data) => ({
+  modelo: data.modelo,
+  marca: data.marca,
+  fabricante: data.fabricante,
+  tecnologia: data.tecnologia,
+  aplicacion: data.aplicacion,
+  sistema: data.sistema,
+  dimensiones: data.dimensiones,
+  funcionalidad: data.funcionalidad,
+  puertas: data.puertas,
+  distribucion: data.distribucion,
+  volumen: data.volumen,
+  repuestos: data.repuestos,
+  thumbnails: data.thumbnails || [],
+});
