@@ -9,7 +9,7 @@ const getAllProdPaginated = async (options, filter, sortOptions) => {
     page,
     hasPrevPage,
     hasNextPage,
-  } = await WashingMachine.paginate(filter, { ...options, sortOptions });
+  } = await WashingMachine.paginate(filter, { ...options, sort: sortOptions });
 
   return {
     docs,

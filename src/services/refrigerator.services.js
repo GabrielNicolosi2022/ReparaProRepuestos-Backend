@@ -9,7 +9,7 @@ const getAllProdPaginated = async (options, filter, sortOptions) => {
     page,
     hasPrevPage,
     hasNextPage,
-  } = await Refrigerator.paginate(filter, { ...options, sortOptions });
+  } = await Refrigerator.paginate(filter, { ...options, sort: sortOptions });
 
   return {
     docs,
