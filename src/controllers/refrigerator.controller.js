@@ -5,6 +5,7 @@ import {
   validateproductFormat,
   validateProductFields,
 } from "../helpers/refrigerator.helpers.js";
+import { sortedProds } from "../helpers/sort.helpers.js";
 
 const log = getLogger();
 
@@ -18,15 +19,7 @@ const getAllProducts = async (req, res) => {
     const query = req.query; // permite ordenarlos por categoria, marca, tipo, etc.
 
     // ordenar los productos si se proporciona un sort
-    const sortOptions = {};
-
-    if (sort) {
-      if (sort === "asc") {
-        sortOptions.name = 1;
-      } else if (sort === "desc") {
-        sortOptions.name = -1;
-      }
-    }
+    const sortOptions = sortedProds(sort);
 
     // filtrar los productos si se proporciona query
     const filter = {};
