@@ -16,7 +16,6 @@ const washingMachineSchema = new mongoose.Schema({
   },
   fabricante: {
     type: String,
-    required: true,
   },
   tecnologia: {
     type: String,
