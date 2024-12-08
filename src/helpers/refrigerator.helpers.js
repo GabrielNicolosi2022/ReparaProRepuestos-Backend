@@ -1,11 +1,3 @@
-export const validateproductFormat = (data) => {
-  // Verificar que se proporcione un formato de producto válido y que éste no sea enviado vacío
-  if (!(typeof data === "object" && Object.keys(data).length > 0)) {
-  }
-  // si no tiene errores
-  return null;
-};
-
 export const validateProductFields = (data) => {
   const { repuestos } = data;
   // si no está completo el campo refrigerante
