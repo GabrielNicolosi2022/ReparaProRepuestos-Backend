@@ -36,10 +36,13 @@ const updateProductById = async (id, data) =>
 
 const deleteProduct = async (id) => await WashingMachine.deleteOne({ _id: id });
 
+const findProductByBrandAndModel = async (data) =>
+  await WashingMachine.findOne({ marca: data.marca, modelo: data.modelo });
 export {
   getAllProdPaginated,
   getProductById,
   createProduct,
   updateProductById,
   deleteProduct,
+  findProductByBrandAndModel,
 };
