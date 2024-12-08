@@ -190,7 +190,6 @@ const createProduct = async (req, res) => {
   }
 };
 
-//TODO:   deleteProduct,
 /** updateProduct - Modifica un producto existente
  * @param {id} req
  * @param {data} req
@@ -212,7 +211,7 @@ const updateProduct = async (req, res) => {
     // enviar la data
     const updatedProduct = await refrigService.updateProductById(id, data);
 
-    res.status(201).json({
+    res.status(200).json({
       status: "success",
       message: "Producto actualizado correctamente",
       payload: updatedProduct,
