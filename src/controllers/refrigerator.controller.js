@@ -1,10 +1,8 @@
 import getLogger from "../utils/log.utils.js";
 import * as refrigService from "../services/refrigerator.services.js";
 import { formatProductData } from "../DTO/refrigerator.dto.js";
-import {
-  validateproductFormat,
-  validateProductFields,
-} from "../helpers/refrigerator.helpers.js";
+import { validateproductFormat } from "../helpers/validations.helpers.js";
+import { validateProductFields } from "../helpers/refrigerator.helpers.js";
 import { sortedProds } from "../helpers/sort.helpers.js";
 import { filteredProds } from "../helpers/filter.helpers.js";
 
